@@ -9,6 +9,7 @@ var logger = require('pomelo-logger').getLogger(__filename);
 var port = argv['p'] || argv['P'] || serverConfig['port'];
 var env = argv['env'] || process.cwd();
 var mode = argv['mode'] || 'client';
+var log = argv['log'] || false;
 
 if (mode === 'client') {
 	cli();
@@ -25,8 +26,11 @@ if (mode === 'client') {
 	loader.handle("master", masterPath);
 	loader.handle("servers", serversPath);
 	loader.handle("daemon", daemonPath);
-	loader.handle("mongo", mongoPath);
 	daemonServer.start(function(err, status) {
+		if(!log){
+			return;
+		}
+		loader.handle("mongo", mongoPath);
 		var d = new daemon();
 		d.init(function(err){
 			if(err){
