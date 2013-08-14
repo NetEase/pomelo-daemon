@@ -9,8 +9,12 @@ var logger = require('pomelo-logger').getLogger(__filename);
 var port = argv['p'] || argv['P'] || serverConfig['port'];
 var env = argv['env'] || process.cwd();
 var mode = argv['mode'] || 'client';
+var debug = argv['debug'] || false;
 var log = argv['log'] || false;
 
+if (debug) {
+	process.env.debug = true;
+}
 if (mode === 'client') {
 	cli();
 } else {
