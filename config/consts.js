@@ -75,3 +75,4 @@ consts.COMANDS_KILL_MASTER_OK = "kill master ok";
 consts.DAEMON_EXT = "pomelo-daemon";
 
 consts.START_MASTER_TIMEOUT = 3000;
+consts.START_DAEMON_TIMEOUT = 1000;
