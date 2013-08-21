@@ -9,7 +9,7 @@ in distributed environment better.
 npm install -g pomelo-daemon
 ```
 ##Usage
-#Use pomelo-daemon to start pomelo clusters  
+###start pomelo clusters  
 
 - deploy codes in servers 
 - config servers.json to the right host instead of '127.0.0.1' etc  
@@ -47,7 +47,7 @@ start all
 
 - pomelo clusters are started 
 
-#Daemon rpc logger collector
+###daemon rpc logger collector
 pomelo-daemon provides pomelo rpc-logs collector to sync to mongodb and can be analysied through [pomelo-admin-web](https://github.com/NetEase/pomelo-admin-web)  
 - put mongo.json into config dir  
 mongo.json example
@@ -72,7 +72,7 @@ note: rpc-logs collector is just for debug, in production env it is not suggeste
 
 ##More Usage
 in pomelo-daemon client, type help for more help infomations, enjoy with it  
-![pomelo-daemon](http://ww1.sinaimg.cn/large/b7bc844fgw1e7u2sxkvsbj20l70bodhs.jpg)
+![pomelo-daemon](http://ww2.sinaimg.cn/large/b7bc844fgw1e7u4kzcr2jj20kx0c340d.jpg)
 
 ## License
 
