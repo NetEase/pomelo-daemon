@@ -1,6 +1,6 @@
 {
   "name": "pomelo-daemon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "provide daemon process service for pomelo to deploy in distributed environments",
   "main": "index.js",
   "scripts": {
