@@ -13,6 +13,7 @@ var mode = argv['mode'] || 'client';
 var debug = argv['debug'] || false;
 var log = argv['log'] || false;
 var h = argv['h'] || argv['help'];
+var pattern = argv['pattern'] || 'rpc-log';
 var extra = argv._;
 
 if ((extra && extra.length) || h) {
@@ -49,7 +50,7 @@ if (mode === 'client') {
 				logger.error(err);
 				process.exit(0);
 			}
-			d.collect(env + '/logs/', 'rpc-log', null, function(err) {
+			d.collect(env + '/logs/', pattern, null, function(err) {
 
 			});
 		});

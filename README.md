@@ -9,7 +9,7 @@ in distributed environment better.
 npm install -g pomelo-daemon
 ```
 ##Usage
-Use pomelo-daemon to start pomelo clusters  
+#Use pomelo-daemon to start pomelo clusters  
 
 - deploy codes in servers 
 - config servers.json to the right host instead of '127.0.0.1' etc  
@@ -17,10 +17,10 @@ Use pomelo-daemon to start pomelo clusters
 daemon.json example
 ```
 {
-	"id": "dh37fgj492je",
-	"key": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn",
-	"algorithm": "sha256",
-	"user": "pomelo"
+		"id": "dh37fgj492je",
+		"key": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn",
+		"algorithm": "sha256",
+		"user": "pomelo"
 }
 ```
 note: pomelo-daemon use [hawk](https://github.com/hueniverse/hawk/) to provide safety between servers  
@@ -46,6 +46,29 @@ start all
 ```
 
 - pomelo clusters are started 
+
+#Daemon rpc logger collector
+pomelo-daemon provides pomelo rpc-logs collector to sync to mongodb and can be analysied through [pomelo-admin-web](https://github.com/NetEase/pomelo-admin-web)  
+- put mongo.json into config dir  
+mongo.json example
+```
+{
+		"host": "localhost",
+		"port": 27017,
+		"username": "pomelo",
+		"password": "pomelo",
+		"database": "test",
+		"collection": "cpomelo"
+}
+```
+
+- enable pomelo-daemon rpc logger collector
+use --pattern param to set rpc-log files start patterns  
+```
+pomelo-daemon --mode=server --log --pattern=rpc-log
+```
+
+note: rpc-logs collector is just for debug, in production env it is not suggested to enable rpc-logs  
 
 ##More Usage
 in pomelo-daemon client, type help for more help infomations, enjoy with it  

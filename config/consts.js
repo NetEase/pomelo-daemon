@@ -23,9 +23,11 @@ consts.HELP_LOGIN = [
 	"Pomelo is a fast, scalable game server framework for node.js. ",
 	"Usage: pomelo-daemon [options]\n",
 	"-h, --help                  display this help",
-	"--mode=[client|server]      start daemon in client|server mode, default mode is client",
 	"-p, -P port                 set daemon server listening port ",
-	"--debug                     running in debug mode\n"
+	"--log                       start daemon log collector",
+	"--debug                     running in debug mode",
+	"--mode=[client|server]      start daemon in client|server mode, default mode is client",
+	"--pattern=pattern           daemon log collector pattern, default is \'rpc-log\'\n"
 ];
 
 consts.COMANDS_ALL = [
