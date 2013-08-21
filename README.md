@@ -48,7 +48,7 @@ start all
 - pomelo clusters are started 
 
 ###daemon rpc logger collector
-pomelo-daemon provides pomelo rpc-logs collector to sync to mongodb and can be analysied through [pomelo-admin-web](https://github.com/NetEase/pomelo-admin-web)  
+pomelo-daemon provides pomelo rpc-logs collector to sync to mongodb and can be analysed through [pomelo-admin-web](https://github.com/NetEase/pomelo-admin-web)  
 - put mongo.json into config dir  
 mongo.json example
 ```
@@ -71,7 +71,7 @@ pomelo-daemon --mode=server --log --pattern=rpc-log
 note: rpc-logs collector is just for debug, in production env it is not suggested to enable rpc-logs  
 
 ##More Usage
-in pomelo-daemon client, type help for more help infomations, enjoy with it  
+in pomelo-daemon client, type help for more help information, and enjoy it  
 ![pomelo-daemon](http://ww2.sinaimg.cn/large/b7bc844fgw1e7u4kzcr2jj20kx0c340d.jpg)
 
 ## License
