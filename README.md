@@ -11,7 +11,21 @@ npm install -g pomelo-daemon
 ##Usage
 Use pomelo-daemon to start pomelo clusters  
 
-- deploy codes in servers and config servers.json to the right host instead of '127.0.0.1' etc  
+- deploy codes in servers 
+- config servers.json to the right host instead of '127.0.0.1' etc  
+- put daemon.json to the config dir  
+daemon.json example
+```
+{
+	"id": "dh37fgj492je",
+	"key": "agarxhqb98rpajloaxn34ga8xrunpagkjwlaw3ruxnpaagl29w4rxn",
+	"algorithm": "sha256",
+	"user": "pomelo"
+}
+```
+note: pomelo-daemon use [hawk](https://github.com/hueniverse/hawk/) to provide safety between servers  
+you can modify daemon.json to your own  
+
 - cd to /game-server path  
 - in master server, run  
 ```
