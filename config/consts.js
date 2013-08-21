@@ -19,12 +19,13 @@ consts.HELP_INFO_2 = [
 ];
 
 consts.HELP_LOGIN = [
-	"\nWelcome to the Pomelo monitor.",
+	"\nWelcome to the Pomelo daemon.",
 	"Pomelo is a fast, scalable game server framework for node.js. ",
-	"you can use following command to connect to pomelo master",
-	"pomelo-cli -h host -p port -u user -P password",
-	"default type pomelo-cli equals to",
-	"pomelo-cli -h 127.0.0.1 -p 3306 -u admin -P admin\n"
+	"Usage: pomelo-daemon [options]\n",
+	"-h, --help                  display this help",
+	"--mode=[client|server]      start daemon in client|server mode, default mode is client",
+	"-p, -P port                 set daemon server listening port ",
+	"--debug                     running in debug mode\n"
 ];
 
 consts.COMANDS_ALL = [
@@ -38,8 +39,8 @@ consts.COMANDS_ALL = [
 consts.COMANDS_MAP = {
 	"help": 1,
 	"kill": ["\nkill pomeo server through daemon",
-			"example: kill serverId serverType environment",
-			"example: kill all environment",
+			"example: kill <serverId> <serverType> <environment>",
+			"example: kill all <environment>",
 			"note: in pomelo serverId has the style of serverType-server-num",
 			"so you can using following commands also",
 			"start area-server-1",
@@ -47,8 +48,8 @@ consts.COMANDS_MAP = {
 			"default environment is development\n"
 	],
 	"start": ["\nstart pomelo server through daemon",
-			"example: start serverId serverType environment",
-			"example: start all environment",
+			"example: start <serverId> <serverType> <environment>",
+			"example: start all <environment>",
 			"note: in pomelo serverId has the style of serverType-server-num",
 			"so you can using following commands also",
 			"start area-server-1",
