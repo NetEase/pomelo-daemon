@@ -23,6 +23,7 @@ if ((extra && extra.length) || h) {
 
 if (debug) {
 	process.env.debug = true;
+	process.env.LOGGER_LINE = true;
 }
 if (mode === 'client') {
 	cli();

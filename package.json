@@ -26,7 +26,7 @@
     "mongodb": "1.3.12",
     "tail": "0.3.1",
     "event-stream": "3.0.16",
-    "pomelo-schedule": "0.3.5"
+    "pomelo-schedule": "0.3.6"
   },
   "author": "fantasyni",
   "license": "MIT"
